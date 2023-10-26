@@ -1,5 +1,4 @@
-﻿using AspNetCore;
-using EjsU7_SG.Models;
+﻿using EjsU7_SG.Models.DAL;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -21,6 +20,13 @@ namespace EjsU7_SG.Controllers
                 message = "Buenas noches";
             }
 
+            ViewData["Message"] = message;
+            ViewBag.fechaLarga = fechaActual.ToLongDateString();
+            return View(persona);
+        }
+
+        public IActionResult listadoPersonas()
+        {
             List<clsPersona> listaPersonas = new()
             {
                 persona,
@@ -33,9 +39,7 @@ namespace EjsU7_SG.Controllers
             };
 
             ViewBag.listaPersonas = listaPersonas;
-            ViewData["Message"] = message;
-            ViewBag.fechaLarga = fechaActual.ToLongDateString();
-            return View(persona);
+            return View();
         }
 
         private clsPersona persona = new clsPersona()

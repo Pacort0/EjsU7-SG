@@ -1,4 +1,4 @@
-﻿namespace EjsU7_SG.Models
+﻿namespace EjsU7_SG.Models.DAL
 {
     public class clsPersona
     {
@@ -8,6 +8,7 @@
         private DateTime fechaNac;
         private long tlfn;
         private int id;
+        private int idDepartamento;
         #endregion
 
         #region constructores
@@ -24,13 +25,14 @@
             this.apellidos = apellidos;
         }
 
-        public clsPersona(int id, string nombre, string apellidos, DateTime fechaNac, long tlfn)
+        public clsPersona(int id, string nombre, string apellidos, DateTime fechaNac, long tlfn, int idDepartamento)
         {
             this.id = id;
             this.nombre = nombre;
             this.apellidos = apellidos;
             this.tlfn = tlfn;
             this.fechaNac = fechaNac;
+            this.idDepartamento = idDepartamento;
         }
         #endregion
 
@@ -59,6 +61,12 @@
         {
             get { return tlfn; }
             set { tlfn = value; }
+        }
+
+        public int IdDepartamento
+        {
+            get { return idDepartamento; }
+            set { idDepartamento = value; }
         }
         public string NombreCompleto
         {
