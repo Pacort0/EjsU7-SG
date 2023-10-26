@@ -1,4 +1,5 @@
-﻿using EjsU7_SG.Models;
+﻿using AspNetCore;
+using EjsU7_SG.Models.DAL;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -8,6 +9,7 @@ namespace EjsU7_SG.Controllers
     {
         public ActionResult Index()
         {
+
             var fechaActual = DateTime.Now;
             var message = "Buenos días";
 
@@ -19,6 +21,18 @@ namespace EjsU7_SG.Controllers
                 message = "Buenas noches";
             }
 
+            List<clsPersona> listaPersonas = new List<clsPersona>()
+            {
+                persona,
+                new clsPersona() {Id = 2, Nombre = "Juan", Apellidos = "Martínez"},
+                new clsPersona() {Id = 3, Nombre = "Pepe", Apellidos = "Correa"},
+                new clsPersona() {Id = 4, Nombre = "María", Apellidos = "Ronaldo"},
+                new clsPersona() {Id = 5, Nombre = "Amapola", Apellidos = "Rakitic"},
+                new clsPersona() {Id = 6, Nombre = "Rocío", Apellidos = "Duncal"},
+                new clsPersona() {Id = 7, Nombre = "Pedro", Apellidos = " Rodríguez"},
+            };
+
+            ViewBag.listaPersonas = listaPersonas;
             ViewData["Message"] = message;
             ViewBag.fechaLarga = fechaActual.ToLongDateString();
             return View(persona);

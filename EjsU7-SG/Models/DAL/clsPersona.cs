@@ -1,10 +1,10 @@
-﻿namespace EjsU7_SG.Models
+﻿namespace EjsU7_SG.Models.DAL
 {
     public class clsPersona
     {
         #region atributos
-        private String nombre;
-        private String apellidos;
+        private string nombre;
+        private string apellidos;
         private DateTime fechaNac;
         private long tlfn;
         private int id;
@@ -19,6 +19,7 @@
 
         public clsPersona(int id, string nombre, string apellidos)
         {
+            this.id = id;
             this.nombre = nombre;
             this.apellidos = apellidos;
         }
@@ -34,12 +35,12 @@
         #endregion
 
         #region propiedades
-        public String Nombre
+        public string Nombre
         {
             get { return nombre; }
             set { nombre = value; }
         }
-        public String Apellidos
+        public string Apellidos
         {
             get { return apellidos; }
             set { apellidos = value; }
@@ -59,11 +60,11 @@
             get { return tlfn; }
             set { tlfn = value; }
         }
-        public String NombreCompleto
+        public string NombreCompleto
         {
             get { return $"{nombre} {apellidos}"; }
         }
-        public String Direccion { get; set; }
+        public string Direccion { get; set; }
         #endregion
         #region funciones y metodos
         ///<summary>
@@ -72,7 +73,7 @@
         ///Postcondiciones: primera letra de cada palabra sea mayúscula, que no sea null... etc.
         ///</summary>
         ///<returns>string con el nombre completo</returns>
-        public String FuncionNombreCompleto()
+        public string FuncionNombreCompleto()
         {
             return $"Su nombre completo es: {nombre} {apellidos}";
         }

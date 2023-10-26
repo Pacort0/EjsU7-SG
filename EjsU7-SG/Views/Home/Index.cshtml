@@ -2,7 +2,7 @@
     ViewData["Title"] = "Home Page";
 }
 
-@model EjsU7_SG.Models.clsPersona
+@model EjsU7_SG.Models.DAL.clsPersona
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
@@ -16,4 +16,7 @@
     <p>Fecha de nacimiento: @Model.FechaNac</p>
     <p>Teléfono: @Model.Tlfn</p>
     <br />
+    <br />
+    <br />
+    @Html.ActionLink("Listado personas", "listadoPersonas")
 </div>
