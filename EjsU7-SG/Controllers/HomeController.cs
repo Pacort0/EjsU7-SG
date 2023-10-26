@@ -1,5 +1,5 @@
 ﻿using AspNetCore;
-using EjsU7_SG.Models.DAL;
+using EjsU7_SG.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -21,7 +21,7 @@ namespace EjsU7_SG.Controllers
                 message = "Buenas noches";
             }
 
-            List<clsPersona> listaPersonas = new List<clsPersona>()
+            List<clsPersona> listaPersonas = new()
             {
                 persona,
                 new clsPersona() {Id = 2, Nombre = "Juan", Apellidos = "Martínez"},

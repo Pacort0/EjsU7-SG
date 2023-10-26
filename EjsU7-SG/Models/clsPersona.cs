@@ -1,4 +1,4 @@
-﻿namespace EjsU7_SG.Models.DAL
+﻿namespace EjsU7_SG.Models
 {
     public class clsPersona
     {
