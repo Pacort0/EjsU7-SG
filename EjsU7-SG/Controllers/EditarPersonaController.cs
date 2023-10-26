@@ -4,7 +4,7 @@ namespace EjsU7_SG.Controllers
 {
     public class EditarPersonaController : Controller
     {
-        public IActionResult Index()
+        public IActionResult EditarPersona()
         {
             return View();
         }

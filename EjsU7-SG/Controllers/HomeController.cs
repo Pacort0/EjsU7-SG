@@ -28,14 +28,14 @@ namespace EjsU7_SG.Controllers
         public IActionResult listadoPersonas()
         {
             List<clsPersona> listaPersonas = new()
-            {
+            {   
                 persona,
-                new clsPersona() {Id = 2, Nombre = "Juan", Apellidos = "Martínez"},
-                new clsPersona() {Id = 3, Nombre = "Pepe", Apellidos = "Correa"},
-                new clsPersona() {Id = 4, Nombre = "María", Apellidos = "Ronaldo"},
-                new clsPersona() {Id = 5, Nombre = "Amapola", Apellidos = "Rakitic"},
-                new clsPersona() {Id = 6, Nombre = "Rocío", Apellidos = "Duncal"},
-                new clsPersona() {Id = 7, Nombre = "Pedro", Apellidos = " Rodríguez"},
+                new clsPersona() {Id = 2, Nombre = "Juan", Apellidos = "Martínez", IdDepartamento = 1},
+                new clsPersona() {Id = 3, Nombre = "Pepe", Apellidos = "Correa",IdDepartamento =  2},
+                new clsPersona() {Id = 4, Nombre = "María", Apellidos = "Ronaldo",IdDepartamento =  2},
+                new clsPersona() {Id = 5, Nombre = "Amapola", Apellidos = "Rakitic",IdDepartamento =  3},
+                new clsPersona() {Id = 6, Nombre = "Rocío", Apellidos = "Duncal",IdDepartamento = 4},
+                new clsPersona() {Id = 7, Nombre = "Pedro", Apellidos = " Rodríguez", IdDepartamento = 3},
             };
 
             ViewBag.listaPersonas = listaPersonas;

@@ -18,11 +18,12 @@
             apellidos = "";
         }
 
-        public clsPersona(int id, string nombre, string apellidos)
+        public clsPersona(int id, string nombre, string apellidos, int idDepartamento)
         {
             this.id = id;
             this.nombre = nombre;
             this.apellidos = apellidos;
+            this.idDepartamento = idDepartamento;
         }
 
         public clsPersona(int id, string nombre, string apellidos, DateTime fechaNac, long tlfn, int idDepartamento)
