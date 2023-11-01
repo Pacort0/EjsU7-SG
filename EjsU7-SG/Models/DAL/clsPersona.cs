@@ -37,7 +37,7 @@
         }
         #endregion
 
-        #region propiedades
+         #region propiedades
         public string Nombre
         {
             get { return nombre; }
