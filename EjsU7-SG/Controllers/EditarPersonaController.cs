@@ -15,14 +15,7 @@ namespace EjsU7_SG.Controllers
         /// <returns>Devuelve la vista EditarPersona</returns>
         public IActionResult EditarPersona()
         {
-
-            List<clsDepartamento> listaDepartamentos = new() { 
-                new clsDepartamento { IdDepartamento = 1, NombreDepartamento = "Finanzas" },
-                new clsDepartamento { IdDepartamento = 2, NombreDepartamento = "Dirección" },
-                new clsDepartamento { IdDepartamento = 3, NombreDepartamento = "Recursos Humanos" },
-                new clsDepartamento { IdDepartamento = 4, NombreDepartamento = "Producción" },
-            };
-            return View(clsListadoPersonas.listadoPersonas());
+            return View(clsListadoDeptPersonas.listadoDeptPersonas());
         }
     }
 }

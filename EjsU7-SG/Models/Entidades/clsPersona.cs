@@ -18,6 +18,13 @@
             apellidos = "";
         }
 
+        public clsPersona(int id, string nombre, string apellidos)
+        {
+            this.id = id;
+            this.nombre = nombre;
+            this.apellidos = apellidos;
+        }
+
         public clsPersona(int id, string nombre, string apellidos, int idDepartamento)
         {
             this.id = id;
@@ -74,6 +81,8 @@
             get { return $"{nombre} {apellidos}"; }
         }
         public string Direccion { get; set; }
+
+        public clsPersona personaSeleccionada { get; set; }
         #endregion
         #region funciones y metodos
         ///<summary>
