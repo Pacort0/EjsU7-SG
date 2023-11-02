@@ -2,12 +2,8 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 
-@model clsPersona 
+@model List<EjsU7_SG.Models.Entidades.clsPersona>
 
-@{
-    var listaPersonas = @ViewBag.listaPersonas;
-    var listaDeps = @ViewBag.listaDepartamentos;
-}
 
 @Html.ActionLink("Lista de personas", "listadoPersonas", "Home")
 @Html.ActionLink("Página Principal", "Index", "Home")
@@ -18,37 +14,12 @@
         <label for="personas">Selecciona una persona a editar: </label>
         <select id="personas" name="personas">
             @{
-                foreach (var persona in listaPersonas)
+                foreach (var persona in Model)
                 {
                     <option value="{@persona.Nombre}"> @persona.NombreCompleto</option>
                 }
             }
         </select>
-        <br />
-        <br />
-
-        <label for="Nombre">Nombre:</label>
-        @Html.TextBoxFor(persona => persona.Nombre)
-        <br />
-        <label for="Apellidos">Apellidos:</label>
-        @Html.TextBoxFor(persona => persona.Apellidos)
-        <br />
-        <label for="fechaNac">Fecha de Nacimiento:</label>
-        @Html.TextBoxFor(persona => persona.FechaNac)
-        <br />
-        <label for="Tlfn">Teléfono:</label>
-        @Html.TextBoxFor(persona => persona.Tlfn)
-        <br />
-        <label for="Departamento">Departamento:</label>
-        <select id="SelectIdDepartamento" name="SelectIdDepartamento">
-            <option value="1">Departamento 1</option>
-            <option value="2">Departamento 2</option>
-            <option value="3">Departamento 3</option>
-            <option value="4">Departamento 4</option>
-        </select>
-        <br />
-        <br />
-        <button type="submit" name="Guardar">Guardar</button>
     </form>
 </div>
 

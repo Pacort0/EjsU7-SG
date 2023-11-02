@@ -4,13 +4,12 @@
 
 @Html.ActionLink("Página principal", "index")
 
+@model List<EjsU7_SG.Models.Entidades.clsPersona>
+@using EjsU7_SG.Models.DAL
+
 <h2>Listado de personas</h2>
 <br />
 <br />
-
-@{
-    var lista = @ViewBag.listaPersonas;
-}
  
 <table>
     <thead>
@@ -20,7 +19,7 @@
             <th>Apellidos</th>
         </tr>
     </thead>
-    @foreach (var persona in lista)
+    @foreach (var persona in Model)
     {
         <tr>
             <td>@persona.Id</td>
