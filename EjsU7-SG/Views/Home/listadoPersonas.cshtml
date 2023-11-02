@@ -4,18 +4,22 @@
 
 @Html.ActionLink("Página principal", "index")
 
-<h2>Hola</h2>
+<h2>Listado de personas</h2>
+<br />
+<br />
 
 @{
     var lista = @ViewBag.listaPersonas;
 }
  
 <table>
-    <tr>
-        <th>Id</th>
-        <th>Nombre</th>
-        <th>Apellidos</th>
-    </tr>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+        </tr>
+    </thead>
     @foreach (var persona in lista)
     {
         <tr>

@@ -6,6 +6,13 @@ namespace EjsU7_SG.Controllers
 {
     public class HomeController : Controller
     {
+        /// <summary>
+        /// ActionResult para la vista Index. Creamos una variable que recoge la hora actual del día y
+        /// programamos un sistema para enviar un saludo en función de la hora del día.
+        /// La vista recibe el mensaje mediante un ViewData, recibe la fecha en versión larga mediante un ViewBag 
+        /// y un objeto persona mediante el modelo
+        /// </summary>
+        /// <returns>Devuelve la vista Index</returns>
         public ActionResult Index()
         {
 
@@ -25,6 +32,12 @@ namespace EjsU7_SG.Controllers
             return View(persona);
         }
 
+        /// <summary>
+        /// ActionResult en el que se ha generado una lista de objetos clsPersona
+        /// La vista recibe la lista mediante una ViewBag
+        /// Post: La lista no puede estar vacía 
+        /// </summary>
+        /// <returns>Devuelve la vista listadoPersonas</returns>
         public IActionResult listadoPersonas()
         {
             List<clsPersona> listaPersonas = new()
@@ -42,6 +55,9 @@ namespace EjsU7_SG.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Creamos un objeto persona porque podemos 
+        /// </summary>
         private clsPersona persona = new clsPersona()
         {
             Id = 1,
