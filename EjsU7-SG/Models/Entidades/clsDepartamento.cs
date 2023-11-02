@@ -1,4 +1,4 @@
-﻿namespace EjsU7_SG.Models.DAL
+﻿namespace EjsU7_SG.Models.Entidades
 {
     public class clsDepartamento
     {
@@ -16,7 +16,7 @@
 
         public clsDepartamento(int idDepartamento, string nombreDepartamento)
         {
-            this.idDepartamento= idDepartamento;
+            this.idDepartamento = idDepartamento;
             this.nombreDepartamento = nombreDepartamento;
         }
         #endregion

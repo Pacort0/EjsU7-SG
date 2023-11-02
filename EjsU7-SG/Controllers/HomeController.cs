@@ -1,4 +1,4 @@
-﻿using EjsU7_SG.Models.DAL;
+﻿using EjsU7_SG.Models.Entidades;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 

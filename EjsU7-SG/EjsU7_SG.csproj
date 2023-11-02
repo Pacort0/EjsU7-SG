@@ -18,4 +18,9 @@
     <None Remove="Views\NewFolder\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\DAL\" />
+    <Folder Include="Models\ViewModels\" />
+  </ItemGroup>
+
 </Project>

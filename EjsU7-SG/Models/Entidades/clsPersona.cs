@@ -1,4 +1,4 @@
-﻿namespace EjsU7_SG.Models.DAL
+﻿namespace EjsU7_SG.Models.Entidades
 {
     public class clsPersona
     {
@@ -37,7 +37,7 @@
         }
         #endregion
 
-         #region propiedades
+        #region propiedades
         public string Nombre
         {
             get { return nombre; }

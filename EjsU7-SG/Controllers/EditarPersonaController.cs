@@ -1,6 +1,5 @@
-﻿using EjsU7_SG.Models.DAL;
-using Microsoft.AspNetCore.Mvc;
-using EjsU7_SG.Models.DAL;
+﻿using Microsoft.AspNetCore.Mvc;
+using EjsU7_SG.Models.Entidades;
 
 namespace EjsU7_SG.Controllers
 {
