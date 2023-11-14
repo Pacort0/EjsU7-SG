@@ -81,8 +81,6 @@
             get { return $"{nombre} {apellidos}"; }
         }
         public string Direccion { get; set; }
-
-        public clsPersona personaSeleccionada { get; set; }
         #endregion
         #region funciones y metodos
         ///<summary>

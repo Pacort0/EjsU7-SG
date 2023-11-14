@@ -2,24 +2,39 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 
-@model List<EjsU7_SG.Models.Entidades.clsPersona>
+@model EjsU7_SG.Models.ViewModel.clsPersonaDepartamento
 
 
 @Html.ActionLink("Lista de personas", "listadoPersonas", "Home")
 @Html.ActionLink("Página Principal", "Index", "Home")
-
-
+<!--Variable en la que elegimos la persona cuyos datos queremos editar-->
+@{
+    var modelo = Model.ListaDeptPersonas[0];
+}
+<!--Formulario-->
 <div class="text-center">
     <form>
-        <label for="personas">Selecciona una persona a editar: </label>
-        <select id="personas" name="personas">
+        <br />
+        <br />
+        <label>Nombre: </label>
+        @Html.TextBoxFor(persona => modelo.Nombre)
+        <br />
+        <br />
+        <label>Apellidos: </label>
+        @Html.TextBoxFor(persona => modelo.Apellidos)
+        <br />
+        <br />
+        <label for="departamentos">Departamento: </label>
+        <select id="departamentos" name="departamentos">
             @{
-                foreach (var persona in Model)
+                foreach (var departamento in Model.ListaDepartamentos)
                 {
-                    <option value="selected"> @persona.NombreCompleto</option>
-                }
+                    <option value="departamento">@departamento.NombreDepartamento</option>
+                }   
             }
         </select>
+        <br /><br />
+        <button type="submit">Guardar</button>
     </form>
 </div>
 

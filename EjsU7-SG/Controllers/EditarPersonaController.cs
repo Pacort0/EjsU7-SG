@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using EjsU7_SG.Models.Entidades;
-using EjsU7_SG.Models.DAL;
+using EjsU7_SG.Models.ViewModel;
 
 namespace EjsU7_SG.Controllers
 {
@@ -8,14 +7,14 @@ namespace EjsU7_SG.Controllers
     {
         /// <summary>
         /// Action result para la vista EditarPersona
-        /// En ella se crean dos tablas, una de departamentos y otra de usuarios
-        /// Ambas tablas se pasan a la vista mediante ViewBag
+        /// A la vista se le envía una ViewModel clsPersonaDepartamento, que contiene una lista de personas con departamentos
+        /// y otra de departamentos
         /// Post: Siempre devuelve algo
         /// </summary>
         /// <returns>Devuelve la vista EditarPersona</returns>
         public IActionResult EditarPersona()
         {
-            return View(clsListadoDeptPersonas.listadoDeptPersonas());
+            return View(new clsPersonaDepartamento());
         }
     }
 }
