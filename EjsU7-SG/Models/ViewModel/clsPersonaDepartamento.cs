@@ -3,7 +3,7 @@ using EjsU7_SG.Models.Entidades;
 
 namespace EjsU7_SG.Models.ViewModel
 {
-    public class clsPersonaDepartamento : clsPersona
+    public class clsPersonaDepartamento
     {
         #region atributos
         private List<clsPersona> listaPersonas;
