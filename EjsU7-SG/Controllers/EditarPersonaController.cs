@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using EjsU7_SG.Models.ViewModel;
+using EjsU7_SG.Models.Entidades;
 
 namespace EjsU7_SG.Controllers
 {
@@ -15,6 +16,11 @@ namespace EjsU7_SG.Controllers
         public IActionResult EditarPersona()
         {
             return View(new clsPersonaDepartamento());
+        }
+        [HttpPost]
+        public IActionResult GuardarPersona(clsPersona persona)
+        {
+            return View();
         }
     }
 }

@@ -7,11 +7,12 @@
 
 @Html.ActionLink("Lista de personas", "listadoPersonas", "Home")
 @Html.ActionLink("Página Principal", "Index", "Home")
-<!--Variable en la que elegimos la persona cuyos datos queremos editar-->
 
 <!--Formulario-->
 <div class="text-center">
-    <form>
+    @using (Html.BeginForm("GuardarPersona", "EditarPersona", FormMethod.Post))
+    {
+        <input type="text" name="id" value="@Model.Id" hidden>
         <br />
         <br />
         <label>Nombre: </label>
@@ -23,16 +24,26 @@
         <br />
         <br />
         <label for="departamentos">Departamento: </label>
-        <select name="departamento">
+        <select name="IdDepartamento">
             @{
                 foreach (var departamento in Model.ListaDepartamentos)
                 {
-                    <option value="@departamento.IdDepartamento">@departamento.NombreDepartamento</option>
-                }   
+                    if (Model.IdDepartamento == departamento.IdDepartamento)
+                    {
+                        <option selected="@departamento.NombreDepartamento" value="@departamento.IdDepartamento">@departamento.NombreDepartamento</option>
+                    }
+                    else
+                    {
+                        <option value="@departamento.IdDepartamento">@departamento.NombreDepartamento</option>
+                    }
+                }
             }
         </select>
-        <br /><br />
-        <button type="submit">Guardar</button>
-    </form>
+        <br />
+
+        <br />
+        <button type="submit">Guardar</button> 
+    }
+    
 </div>
 

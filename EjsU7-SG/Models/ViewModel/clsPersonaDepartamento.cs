@@ -17,6 +17,8 @@ namespace EjsU7_SG.Models.ViewModel
             ListaDepartamentos = clsListadoDepartamentos.listadoDepartamentos();
             Nombre = "Ivan";
             Apellidos = "Rakitic";
+            IdDepartamento = 3;
+            Id = 1; 
         }
         #endregion
 
