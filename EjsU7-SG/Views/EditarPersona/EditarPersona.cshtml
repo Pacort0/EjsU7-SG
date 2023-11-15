@@ -8,28 +8,26 @@
 @Html.ActionLink("Lista de personas", "listadoPersonas", "Home")
 @Html.ActionLink("Página Principal", "Index", "Home")
 <!--Variable en la que elegimos la persona cuyos datos queremos editar-->
-@{
-    var modelo = Model.ListaDeptPersonas[7];
-}
+
 <!--Formulario-->
 <div class="text-center">
     <form>
         <br />
         <br />
         <label>Nombre: </label>
-        @Html.TextBoxFor(persona => modelo.Nombre)
+        @Html.TextBoxFor(persona => persona.Nombre)
         <br />
         <br />
         <label>Apellidos: </label>
-        @Html.TextBoxFor(persona => modelo.Apellidos)
+        @Html.TextBoxFor(persona => persona.Apellidos)
         <br />
         <br />
         <label for="departamentos">Departamento: </label>
-        <select id="departamentos" name="departamentos">
+        <select name="departamentos">
             @{
                 foreach (var departamento in Model.ListaDepartamentos)
                 {
-                    <option value="departamento">@departamento.NombreDepartamento</option>
+                    <option value="@departamento.NombreDepartamento">@departamento.NombreDepartamento</option>
                 }   
             }
         </select>
